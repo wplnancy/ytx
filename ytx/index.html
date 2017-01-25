@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>云通讯平台</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="css/animate.css"/>
+    <script src="js/wow.min.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <!--[if lt IE 9]>
+    <script src="lib/html5shiv/html5shiv.min.js"></script>
+    <script src="lib/respond/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<!-- 头部区域 -->
+<header id="header">
+    <!-- <div class="topbar hidden-sm hidden-xs"> -->
+    <div class="topbar visible-md visible-lg">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2 text-center">
+                    <a href="#" class="mobile-link">
+                        <i class="icon-mobilephone"></i>
+                        <span>手机版云通讯</span>
+                        <i class="glyphicon glyphicon-chevron-down"></i>
+                        <img src="img/c_06.png" height="136" width="120" alt="扫一扫">
+                    </a>
+                </div>
+                <div class="col-md-5 text-center">
+                    <i class="icon-telephone"></i>
+                    <span>4006-89-4006（服务时间：9:00-21:00）</span>
+                </div>
+                <div class="col-md-2 text-center">
+                    <a href="#">常见问题</a>
+                    <a href="#">联系客服</a>
+                </div>
+                <div class="col-md-3 text-center">
+                    <a href="#" class="btn btn-style btn-sm" data-toggle="modal" data-target="#myModal2">立即登陆</a>
+
+                    <button type="button" class="btn btn-info btn-sm" data-target="#myModal">
+                        免费注册
+                    </button>
+                </div>
+            </div>
+        </div>
+</header>
+<nav class="navbar navbar-style navbar-static-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button id="btn" type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#nav_list" aria-expanded="false">
+                <span class="sr-only">切换菜单</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">
+                <img src="img/logo.png" alt="">
+            </a>
+        </div>
+        <div id="nav_list" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="index.html"><span class="glyphicon glyphicon-home navicon"></span>首页</a>
+                </li>
+                <li><a href="case.html"><span class="glyphicon glyphicon-fire navicon"></span>应用场景</a></li>
+                <li><a href="news.html"><span></span><span class="glyphicon glyphicon-stats navicon"></span>最新动态</a>
+                </li>
+                <li><a href="download.html"><span class="glyphicon glyphicon-cloud-download navicon"></span>下载</a></li>
+                <li><a href="about.html"><span class="glyphicon glyphicon-user navicon"></span>关于我们</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right hidden-sm hidden-xs">
+                <li class="dropdown" role="presentation"><a href="javascript:void 0">产品中心</a>
+                    <ul class="subMenu" role="menu">
+                        <li><a href="#">修改密码</a></li>
+                        <li><a href="#">安全中心</a></li>
+                        <li><a href="#">我的应用</a></li>
+                        <li><a href="#">用户管理</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- /头部区域 -->
+<!-- 广告轮播 -->
+<section id="main_ad" class="carousel slide" data-ride="carousel">
+    <!-- 下面的小点点，活动指示器 -->
+    <ol class="carousel-indicators">
+        <li data-target="#main_ad" data-slide-to="0" class="active"></li>
+        <li data-target="#main_ad" data-slide-to="1"></li>
+        <li data-target="#main_ad" data-slide-to="2"></li>
+        <li data-target="#main_ad" data-slide-to="3"></li>
+    </ol>
+    <!-- 轮播项 -->
+    <div class="carousel-inner" role="listbox">
+        <div class="item active" data-image-lg="img/banner01.jpg" data-image-xs="img/small01.png"></div>
+        <div class="item" data-image-lg="img/banner02.jpg" data-image-xs="img/small02.png"></div>
+        <div class="item" data-image-lg="img/banner03.jpg" data-image-xs="img/small03.png"></div>
+        <div class="item" data-image-lg="img/banner04.jpg" data-image-xs="img/small04.png"></div>
+    </div>
+    <!-- 控制按钮 -->
+    <a class="left carousel-control" href="#main_ad" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">上一页</span>
+    </a>
+    <a class="right carousel-control" href="#main_ad" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">下一页</span>
+    </a>
+</section>
+<!-- /广告轮播 -->
+<div class="tese">
+    <h2 class="text-center">一键步入云通讯时代</h2>
+    <div class="container wow wobble" data-wow-duration="0.5s" data-wow-offset="10">
+        <div class="row text-center fore-main">
+            <div class="col-md-4 col-sm-6 col-xs-12 fore1">
+                <div class="con">
+                    <div class="feature-icon"></div>
+                    <h3>语音通话</h3>
+                    <p>
+                        跨平台、高质量、极稳定的互联网高清语音通话服务
+                    </p>
+
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12 fore2">
+                <div class="con">
+                    <div class="feature-icon"></div>
+                    <h3>视频通话</h3>
+                    <p>
+                        超低延迟率、720P 高清、流畅远程一对一视频服务
+                    </p>
+                    <div class="line t"></div>
+                    <div class="line r"></div>
+                    <div class="line b"></div>
+                    <div class="line l"></div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12 fore3">
+                <div class="con">
+                    <div class="feature-icon"></div>
+                    <h3>音视频会议</h3>
+                    <p>
+                        720P 高清视频、高保真音频会议以及极度流畅的数据共享。
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12 fore4">
+                <div class="con">
+                    <div class="feature-icon"></div>
+                    <h3>视频直播</h3>
+                    <p>
+                        高流畅度单路、多路高清视频直播，多种视频直播互动方案
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12 fore5">
+                <div class="con">
+                    <div class="feature-icon"></div>
+                    <h3>数据协同</h3>
+                    <p>
+                        提供包括文字、语音、涂鸦、白板、图片、位置、文件共享等多种内容载体
+                    </p>
+
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12 fore6">
+                <div class="con">
+                    <div class="feature-icon"></div>
+                    <h3>更多</h3>
+                    <p>
+                        更多精彩功能，由您自由演绎
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="advantage text-center">
+    <h2>通讯，从未如此之简单</h2>
+    <div class="container ">
+        <div class="row text-left wow bounceInLeft" data-wow-duration="1s" data-wow-delay="0s">
+            <div class="col-md-6 col-sm-4 column">
+                <div class="media">
+                    <a class="media-left media-middle" href="#">
+                        <img data-src="img/01.png" src="img/01.png" alt="...">
+                    </a>
+                    <div class="media-body">
+                        <h4 class="media-heading">电话服务</h4>
+                        <p>全球领先的视频连接和服务提供商，十余年专注音视频通讯，坚持为 APP 提供稳定可靠的沟通服务</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-4 column">
+                <div class="media ">
+                    <a class="media-left media-middle" href="#">
+                        <img data-src="img/02.png" src="img/02.png" alt="...">
+                    </a>
+                    <div class="media-body">
+                        <h4 class="media-heading">呼叫中心</h4>
+                        <p>VoIP 网络电话、高清视频电话、视频会议、视频直播、IM、数据协同等功能快速</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-4 column">
+                <div class="media ">
+                    <a class="media-left media-middle" href="#">
+                        <img data-src="img/03.png" src="img/03.png" alt="...">
+                    </a>
+                    <div class="media-body">
+                        <h4 class="media-heading">流量分发</h4>
+                        <p>VoIP 网络电话、高清视频电话、视频会议、视频直播、IM、数据协同等功能快速嵌入</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-4 column">
+                <div class="media">
+                    <a class="media-left media-middle" href="#">
+                        <img data-src="img/04.png" src="img/04.png" alt="...">
+                    </a>
+                    <div class="media-body">
+                        <h4 class="media-heading">视频</h4>
+                        <p>多维度数据统计平台，业务动态更透明，全球音视频通话质量数据与优化管理</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<section class="range text-center">
+    <h2>
+        承载十亿级用户规模
+    </h2>
+    <div class="container wow bounceInRight" data-wow-delay="0s" data-wow-offset="10" data-wow-duration="1s">
+        <div class="col-sm-6 col-md-4 ">
+            <div class="thumbnail">
+                <a href="" class="showImg"><img data-src="img/001.png" src="img/001.png" height="300" width="440"
+                                                alt="..."></a>
+                <div class="caption">
+                    <h3>移动医疗</h3>
+                    <p class="txt text-left">基于云计算和无线通信技术，并利用IBM x3850、HDS HU150、VMware
+                        View构建移动医疗系统的云计算平台，实现了统一管理和虚拟化，提高了系统性能；通过将虚拟桌面与 VMware vSphere的整合，实现了虚拟桌面的集中式管理</p>
+                    <p class="link_btn"><a href="#" class="btn btn-default" role="button">阅读</a>
+                        <a href="#" class="btn btn-success" role="button">更多</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+                <a href=""><img data-src="img/004.png" src="img/004.png" height="300" width="440" alt="..."></a>
+                <div class="caption">
+                    <h3>社交通讯</h3>
+                    <p class="txt text-left">基于云计算和无线通信技术，并利用IBM x3850、HDS HU150、VMware
+                        View构建移动医疗系统的云计算平台，实现了统一管理和虚拟化，提高了系统性能；通过将虚拟桌面与 VMware vSphere的整合，实现了虚拟桌面的集中式管理</p>
+                    <p class="link_btn">
+                        <button type="button" class="btn btn-default">阅读</button>
+                        <a href="#" class="btn btn-success" role="button">更多</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+                <a href=""><img data-src="img/003.png" src="img/003.png" height="300" width="440" alt="..."></a>
+                <div class="caption">
+                    <h3>在线教育</h3>
+                    <p class="txt text-left">基于云计算和无线通信技术，并利用IBM x3850、HDS HU150、VMware
+                        View构建移动医疗系统的云计算平台，实现了统一管理和虚拟化，提高了系统性能；通过将虚拟桌面与 VMware vSphere的整合，实现了虚拟桌面的集中式管理</p>
+                    <p class="link_btn"><a href="#" class="btn btn-default" role="button">阅读</a>
+                        <a href="#" class="btn btn-success" role="button">更多</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--合作伙伴区域-->
+
+<section class="customer">
+    <h2>来自客户的评价</h2>
+    <p>我们承诺以下是来自真实客户的真实评价，感谢客户对容联·云通讯™ 的长期支持</p>
+    <ul class="judgebox">
+        <li class="selected">
+            <div class="imgbox">
+                <img src="img/syimg1.jpg" alt="">
+            </div>
+            <p class="dec">
+                作为全球首个互联网手机品牌，其推出的MIUI多年来一直赢得小米手机用户及海量刷机用户的厚爱<br/>
+                为让用户体验更好的通话服务，MIUI嵌入云通讯SDK，让"为发烧而生"延续
+            </p>
+            <div class="signname">
+                <span class="name">小米</span>
+            </div>
+        </li>
+        <li>
+            <div class="imgbox">
+                <img src="img/syimg2.jpg" alt="">
+            </div>
+
+            <p class="des">短信验证码不及时、不稳定，客户手机号泄露被骚扰？滴滴打车等多家全国知名互联网公司采用云通讯<br>
+                提供的验证码解决方案、匿名通话解决方案，保证验证码及时与稳定，号码安全不泄露
+            </p>
+            <div class="signname">
+                <span class="name">滴滴出行</span>
+            </div>
+        </li>
+        <li>
+            <div class="imgbox">
+                <img src="img/syimg4.jpg" alt="">
+            </div>
+
+            <p class="des">百合网一直与容联有着密切的合作关系，其新产品“百合情感医院”在业务中新整合了号码卫士功能
+                <br>
+                这款以挽救家庭婚姻、解决夫妻矛盾为主的咨询产品，通过号码卫士充分保障个人隐私
+            </p>
+            <div class="signname">
+                <span class="name">百合网</span>
+            </div>
+        </li>
+        <li>
+            <div class="imgbox">
+                <img src="img/syimg3.jpg" alt="">
+            </div>
+
+            <p class="des">与容联云通讯顺利对接流量分发业务，合作高效、接入简单、摒弃了各种技术障碍
+                <br>
+                在为用户及企业员工分发福利时更得心应手，还在与容联合作对接更多开放能力
+            </p>
+            <div class="signname">
+                <span class="name">金蝶软件</span>
+            </div>
+        </li>
+    </ul>
+
+    <div class="focusList">
+        <a href="javascript:void(0)" class="cur"></a>
+        <a href="javascript:void(0)"></a>
+        <a href="javascript:void(0)"></a>
+        <a href="javascript:void(0)"></a>
+    </div>
+    <a href="javascript:void(0)" class="prev"></a>
+    <a href="javascript:void(0)" class="next"></a>
+
+</section>
+
+
+<!--边栏部分的样式-->
+<section class="service-box">
+    <div class="btn-server">
+        <i class="icon icon1"></i>
+        客服中心
+    </div>
+    <div class="serviceList">
+        <ul>
+            <li class="title">客服中心</li>
+            <li>
+                <a href="">
+                    <i class="icon icon2"></i>
+                    在线客服
+                </a>
+            </li>
+            <li class="phone">
+                <i class="icon icon3"></i>
+                售前咨询
+                <p>13651049521</p>
+            </li>
+            <li class="last">
+                <i class="icon icon4"></i>
+                售后服务
+                <p>400-888-7777</p>
+
+            </li>
+        </ul>
+    </div>
+</section>
+<!--回到顶部的火箭-->
+<section class="top" id="gotop">
+      <span>
+      </span>
+</section>
+
+<!--footer部分-->
+<footer class="footer">
+    <div class="footer-con">
+        <dl>
+            <dt>产品</dt>
+            <dd><a href="">企业邮箱</a></dd>
+            <dd><a href="">企业网盘</a></dd>
+            <dd><a href="">电话会议</a></dd>
+            <dd><a href="">网络会议</a></dd>
+            <dd><a href="">网络直播</a></dd>
+            <dd><a href="">即时通讯</a></dd>
+        </dl>
+        <dl>
+            <dt>在线商城</dt>
+            <dd>
+                <a href="">版本和价格</a>
+
+            </dd>
+            <dd><a href="">个人(基础版)</a>
+            </dd>
+            <dd><a href="">企业充值</a></dd>
+        </dl>
+        <dl>
+            <dt>解决方案</dt>
+            <dd><a href="">为什么使用263</a></dd>
+            <dd><a href="">应用场景</a></dd>
+            <dd><a href="">行业解决方案</a></dd>
+        </dl>
+        <a href=""></a>
+        <dl>
+            <dt>帮助</dt>
+            <dd><a href="">企业邮箱</a></dd>
+            <dd><a href="">电话会议</a></dd>
+            <dd><a href="">网路会议</a></dd>
+            <dd><a href="">即时通讯</a></dd>
+        </dl>
+        <dl>
+            <dt>关于我们</dt>
+            <dd><a href="">关于263</a></dd>
+            <dd><a href="">最新活动</a></dd>
+            <dd><a href="">新闻报道</a></dd>
+            <dd><a href="">销售查询</a></dd>
+            <dd><a href="">商务合作</a></dd>
+        </dl>
+        <dl>
+            <dt>相关服务</dt>
+            <dd><a href="">免费试用</a></dd>
+            <dd><a href="">用户注册</a></dd>
+            <dd><a href="">当用中心</a></dd>
+        </dl>
+
+    </div>
+    <div class="copyright">
+        <p>集团官网 | Copyright©1998-2016 北京二六三企业通信有限公司</p>
+        <p> 京ICP备08010619号-3 京公网安备11010502000201
+        </p>
+    </div>
+
+</footer>
+
+
+<script charset="utf-8" type="text/javascript" src="js/goTop.js">
+</script>
+<script src="lib/jquery/jquery.js"></script>
+<script src="lib/bootstrap/js/bootstrap.js"></script>
+<script charset="utf-8" type="text/javascript" src="js/utils.js">
+
+</script>
+<script src="js/main.js"></script>
+
+
+</body>
+</html>
