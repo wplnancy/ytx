@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <title>云通讯平台</title>
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="css/animate.css"/>
+    <script src="js/wow.min.js"></script>
+  <link rel="stylesheet" href="css/main.css">
+  <!--[if lt IE 9]>
+    <script src="lib/html5shiv/html5shiv.min.js"></script>
+    <script src="lib/respond/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <!-- 头部区域 -->
+  <header id="header">
+    <!-- <div class="topbar hidden-sm hidden-xs"> -->
+    <div class="topbar visible-md visible-lg">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-2 text-center">
+            <a href="#" class="mobile-link">
+              <i class="icon-mobilephone"></i>
+              <span>手机版云通讯</span>
+              <i class="glyphicon glyphicon-chevron-down"></i>
+              <img src="img/c_06.png" height="136" width="120" alt="扫一扫">
+            </a>
+          </div>
+          <div class="col-md-5 text-center">
+            <i class="icon-telephone"></i>
+            <span>4006-89-4006（服务时间：9:00-21:00）</span>
+          </div>
+          <div class="col-md-2 text-center">
+            <a href="#">常见问题</a>
+            <a href="#">联系客服</a>
+          </div>
+          <div class="col-md-3 text-center">
+            <a href="#" class="btn btn-style btn-sm" data-toggle="modal" data-target="#myModal2">立即登陆</a>
+
+              <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                      <div class="modal-content">
+                          <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                              <h4 class="modal-title" id="myModalLabel2">用户登录</h4>
+                          </div>
+                          <div class="modal-body">
+
+                              <form role="form" class="text-left">
+                                  <div class="form-group">
+                                      <label for="username">用户名</label>
+                                      <input type="text" class="form-control" id="username" required placeholder="请输入用户名">
+                                  </div>
+                                  <div class="form-group">
+                                      <label for="pwd">密码</label>
+                                      <input type="password" class="form-control" id="pwd" required  placeholder="请输入密码">
+                                  </div>
+                                  <div class="checkbox">
+                                      <label>
+                                          <input type="checkbox"> 记住密码
+                                      </label>
+                                  </div>
+                                  <button type="submit" class="btn btn-default login">登录</button>
+                              </form>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal">
+                 免费注册
+              </button>
+
+              <!-- Modal -->
+              <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                      <div class="modal-content">
+                          <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                              <h4 class="modal-title" id="myModalLabel">用户注册</h4>
+                          </div>
+                          <div class="modal-body" ng-app="myApp">
+                              <!--<div ng-app="myApp">-->
+                              <form class="form-horizontal" role="form" name="myForm" ng-controller="firstController">
+                                  <div class="form-group" ng-class="{'has-error':myForm.username.$dirty && myForm.username.$invalid}">
+                                      <label for="inputEmail3" class="col-sm-2 control-label">用户名</label>
+                                      <div class="col-sm-10">
+                                          <input type="text"  id="inputEmail3" autocomplete="off" name="username" ng-pattern="/^[a-zA-Z]{1}/" ng-required="true" ng-minlength="5" ng-maxlength="10" ng-model="data.username" class="form-control" placeholder="用户名">
+                                          <div ng-show="myForm.username.$dirty && myForm.username.$error.maxlength" class="alert alert-danger help-block">
+                                              用户名长度不能超过10位
+                                          </div>
+                                          <div ng-show="myForm.username.$dirty && myForm.username.$error.minlength" class="alert alert-danger help-block">
+                                              用户名长度不能小于5位
+                                          </div>
+                                          <div ng-show="myForm.username.$dirty && myForm.username.$error.pattern" class="alert alert-danger help-block">
+                                              用户名必须以英文字母开始
+                                          </div>
+                                      </div>
+
+                                  </div>
+                                  <div class="form-group" ng-class="{'has-error':myForm.password.$dirty && myForm.password.$invalid}">
+                                      <label for="inputPassword3" class="col-sm-2 control-label">密码</label>
+                                      <div class="col-sm-10">
+                                          <input type="password" autocomplete="off" name="password" ng-required="true" ng-minlength="5" ng-maxlength="10" ng-model="data.password" class="form-control" id="inputPassword3" placeholder="请输入密码">
+                                          <div ng-show="myForm.password.$dirty && myForm.password.$error.maxlength" class="alert alert-danger help-block">
+                                              密码长度不能超过10位
+                                          </div>
+                                          <div ng-show="myForm.password.$dirty && myForm.password.$error.minlength" class="alert alert-danger help-block">
+                                              密码长度不能小于5位
+                                          </div>
+
+                                      </div>
+                                  </div>
+
+
+                                  <div class="form-group" ng-class="{'has-error':myForm.passwordConfirm.$dirty && myForm.passwordConfirm.$invalid}">
+                                      <label class="col-sm-2 control-label">确认密码</label>
+                                      <div class="col-sm-10">
+                                          <input type="password" autocomplete="off" name="passwordConfirm" ng-required="true" ng-model="data.passwordConfirm" class="form-control" placeholder="确认密码">
+                                          <div ng-show="myForm.password.$dirty && myForm.passwordConfirm.$dirty && data.password !== data.passwordConfirm" class="alert alert-danger help-block">
+                                              密码和确认密码不一致
+                                          </div>
+                                      </div>
+                                  </div>
+
+
+                                  <div class="form-group" ng-class="{'has-error':myForm.email.$dirty && myForm.email.$invalid}">
+                                      <label class="col-sm-2 control-label">邮箱</label>
+                                      <div class="col-sm-10">
+                                          <input type="email" autocomplete="off" name="email" ng-required="true" ng-minlength="5" ng-maxlength="30" ng-model="data.email" class="form-control" placeholder="邮箱">
+                                          <div ng-show="myForm.email.$dirty && myForm.email.$error.maxlength" class="alert alert-warning help-block">
+                                              邮箱长度不能超过30位
+                                          </div>
+                                          <div ng-show="myForm.email.$dirty && myForm.email.$error.minlength" class="alert alert-warning help-block">
+                                              邮箱长度不能小于5位
+                                          </div>
+                                          <div ng-show="myForm.email.$dirty && myForm.email.$error.email" class="alert alert-warning help-block">
+                                              邮箱格式不正确
+                                          </div>
+                                      </div>
+                                  </div>
+
+                                  <div class="form-group">
+                                      <label class="col-sm-2 control-label">性别</label>
+                                      <div class="col-sm-10">
+                                          <label class="radio-inline">
+                                              <input type="radio" ng-required="true" name="sex" ng-model="data.sex" value="1" /> 男
+                                          </label>
+                                          <label class="radio-inline">
+                                              <input type="radio" ng-required="true" name="sex" ng-model="data.sex" value="0" /> 女
+                                          </label>
+                                      </div>
+                                  </div>
+                                  <div class="form-group">
+                                      <label class="col-sm-2 control-label">出生地</label>
+                                      <div class="col-sm-3">
+                                          <select class="form-control" ng-change="data.area = false" ng-model="data.province" ng-options="x.id as x.name for x in cities | cityFilter:0"></select>
+                                      </div>
+                                      <div class="col-sm-3">
+                                          <select class="form-control" ng-show="data.province" ng-model="data.area" ng-options="x.id as x.name for x in cities | cityFilter:data.province"></select>
+                                      </div>
+                                      <div class="col-sm-3">
+                                          <select class="form-control" ng-required="true" ng-show="data.province && data.area" ng-model="data.city" ng-options="x.id as x.name for x in cities | cityFilter:data.area"></select>
+                                      </div>
+                                  </div>
+                                  <div class="form-group">
+                                      <div class="col-sm-12">
+                                          <button type="submit" class="btn btn-default" ng-disabled="myForm.$invalid">注册</button>
+                                          <button type="reset" class="btn btn-info" ng-click="reset()">重置</button>
+                                      </div>
+                                  </div>
+                              </form>
+
+                          </div>
+                                </div>
+
+                              </div>
+
+                          </div>
+
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </header>
+    <nav class="navbar navbar-style navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button id="btn" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav_list" aria-expanded="false">
+            <span class="sr-only">切换菜单</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">
+            <img src="img/logo.png"  alt="">
+          </a>
+        </div>
+        <div id="nav_list" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="index.html"><span class="glyphicon glyphicon-home navicon"></span>首页</a></li>
+            <li><a href="case.html"><span class="glyphicon glyphicon-fire navicon"></span>应用场景</a></li>
+            <li><a href="news.html"><span></span><span class="glyphicon glyphicon-stats navicon"></span>最新动态</a></li>
+            <li><a href="download.html"><span class="glyphicon glyphicon-cloud-download navicon"></span>下载</a></li>
+            <li><a href="about.html"><span class="glyphicon glyphicon-user navicon"></span>关于我们</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right hidden-sm hidden-xs">
+          <li class="dropdown" role="presentation"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-cog navicon"></i>个人中心</a>
+              <ul class="dropdown-menu" role="menu">
+                  <li><a href="#">修改密码</a></li>
+                  <li><a href="#">安全中心</a></li>
+                  <li><a href="#">我的应用</a></li>
+                  <li><a href="#">用户管理</a></li>
+              </ul>
+          </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+  <!-- /头部区域 -->
+  <!-- 广告轮播 -->
+  <section id="main_ad" class="carousel slide" data-ride="carousel">
+    <!-- 下面的小点点，活动指示器 -->
+    <ol class="carousel-indicators">
+      <li data-target="#main_ad" data-slide-to="0" class="active"></li>
+      <li data-target="#main_ad" data-slide-to="1"></li>
+      <li data-target="#main_ad" data-slide-to="2"></li>
+      <li data-target="#main_ad" data-slide-to="3"></li>
+    </ol>
+    <!-- 轮播项 -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active" data-image-lg="img/banner01.jpg" data-image-xs="img/small01.png"></div>
+      <div class="item" data-image-lg="img/banner02.jpg" data-image-xs="img/small02.png"></div>
+      <div class="item" data-image-lg="img/banner03.jpg" data-image-xs="img/small03.png"></div>
+      <div class="item" data-image-lg="img/banner04.jpg" data-image-xs="img/small04.png"></div>
+    </div>
+    <!-- 控制按钮 -->
+    <a class="left carousel-control" href="#main_ad" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">上一页</span>
+    </a>
+    <a class="right carousel-control" href="#main_ad" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">下一页</span>
+    </a>
+  </section>
+  <!-- /广告轮播 -->
+  <div class="tese">
+      <h2 class="text-center">一键步入云通讯时代</h2>
+      <div class="container wow wobble" data-wow-duration="0.5s" data-wow-offset="10">
+        <div class="row text-center fore-main">
+          <div class="col-md-4 col-sm-6 col-xs-12 fore1">
+            <div class="con">
+             <div class="feature-icon"></div>
+              <h3>语音通话</h3>
+              <p>
+                跨平台、高质量、极稳定的互联网高清语音通话服务
+              </p>
+            
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 col-xs-12 fore2"> 
+            <div class="con">
+                <div class="feature-icon"></div>
+                <h3>视频通话</h3>
+                <p>
+                 超低延迟率、720P 高清、流畅远程一对一视频服务
+                </p>
+                   <div class="line t"></div>
+              <div class="line r"></div>
+              <div class="line b"></div>
+              <div class="line l"></div>
+             </div>
+          </div>
+          <div class="col-md-4 col-sm-6 col-xs-12 fore3">
+             <div class="con">
+              <div class="feature-icon"></div>
+                <h3>音视频会议</h3>
+                <p>
+                  720P 高清视频、高保真音频会议以及极度流畅的数据共享。
+                </p>
+             </div>
+          </div>
+          <div class="col-md-4 col-sm-6 col-xs-12 fore4">
+             <div class="con">
+              <div class="feature-icon"></div>
+                <h3>视频直播</h3>
+                <p>
+                  高流畅度单路、多路高清视频直播，多种视频直播互动方案
+                </p>
+              </div>
+            
+            
+          </div>
+          <div class="col-md-4 col-sm-6 col-xs-12 fore5">
+             <div class="con">
+              <div class="feature-icon"></div>
+                <h3>数据协同</h3>
+                <p>
+                  提供包括文字、语音、涂鸦、白板、图片、位置、文件共享等多种内容载体
+                </p>
+            
+             </div>
+          </div>
+          <div class="col-md-4 col-sm-6 col-xs-12 fore6">
+             <div class="con">
+              <div class="feature-icon"></div>
+                <h3>更多</h3>
+                <p>
+                 更多精彩功能，由您自由演绎
+                </p>
+              
+             </div>
+          </div>
+      </div>
+      </div>
+  </div>
+
+  <div class="advantage text-center">
+    <h2>通讯，从未如此之简单</h2>
+    <div class="container ">
+    <div class="row text-left wow bounceInLeft"  data-wow-duration="1s" data-wow-delay="0s">
+  <div class="col-md-6 col-sm-4 column">
+      <div class="media">
+          <a class="media-left media-middle" href="#">
+            <img data-src="img/01.png" src="img/01.png" alt="...">
+          </a>
+          <div class="media-body">
+            <h4 class="media-heading">电话服务</h4>
+             <p>全球领先的视频连接和服务提供商，十余年专注音视频通讯，坚持为 APP 提供稳定可靠的沟通服务</p>
+          </div>
+      </div>
+  </div>
+  <div class="col-md-6 col-sm-4 column">
+      <div class="media ">
+          <a class="media-left media-middle" href="#">
+            <img data-src="img/02.png" src="img/02.png" alt="...">
+          </a>
+          <div class="media-body">
+            <h4 class="media-heading">呼叫中心</h4>
+           <p>VoIP 网络电话、高清视频电话、视频会议、视频直播、IM、数据协同等功能快速</p>
+          </div>
+      </div>
+  </div>
+  <div class="col-md-6 col-sm-4 column">
+      <div class="media ">
+          <a class="media-left media-middle" href="#">
+            <img data-src="img/03.png" src="img/03.png" alt="...">
+          </a>
+           <div class="media-body">
+            <h4 class="media-heading">流量分发</h4>
+           <p>VoIP 网络电话、高清视频电话、视频会议、视频直播、IM、数据协同等功能快速嵌入</p>
+          </div>
+      </div>
+  </div>
+   <div class="col-md-6 col-sm-4 column">
+      <div class="media">
+          <a class="media-left media-middle" href="#">
+            <img data-src="img/04.png" src="img/04.png" alt="...">
+          </a>
+           <div class="media-body">
+            <h4 class="media-heading">视频</h4>
+          <p>多维度数据统计平台，业务动态更透明，全球音视频通话质量数据与优化管理</p> 
+          </div>
+      </div>
+  </div>
+</div>
+    </div>
+  </div>
+  <section class="range text-center">
+      <h2>
+      承载十亿级用户规模
+      </h2>
+      <div class="container wow bounceInRight" data-wow-delay="0s" data-wow-offset="10" data-wow-duration="1s">
+          <div class="col-sm-6 col-md-4 " >
+            <div class="thumbnail">
+              <a href="" class="showImg"><img data-src="img/001.png"  src="img/001.png" height="300" width="440" alt="..."></a>
+              <div class="caption">
+                <h3>移动医疗</h3>
+                <p class="txt text-left">基于云计算和无线通信技术，并利用IBM x3850、HDS HU150、VMware View构建移动医疗系统的云计算平台，实现了统一管理和虚拟化，提高了系统性能；通过将虚拟桌面与 VMware vSphere的整合，实现了虚拟桌面的集中式管理</p>
+                <p class="link_btn"> <a href="#" class="btn btn-default" role="button">阅读</a>
+                <a href="#" class="btn btn-success" role="button">更多</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+              <a href=""><img data-src="img/004.png"  src="img/004.png" height="300" width="440" alt="..."></a>
+              <div class="caption">
+                    <h3>社交通讯</h3>
+                    <p class="txt text-left">基于云计算和无线通信技术，并利用IBM x3850、HDS HU150、VMware View构建移动医疗系统的云计算平台，实现了统一管理和虚拟化，提高了系统性能；通过将虚拟桌面与 VMware vSphere的整合，实现了虚拟桌面的集中式管理</p>
+                    <p class="link_btn">
+                    <button type="button" class="btn btn-default">阅读</button>
+                    <a href="#" class="btn btn-success" role="button">更多</a>
+                    </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+              <a href=""><img data-src="img/003.png"  src="img/003.png" height="300" width="440" alt="..."></a>
+              <div class="caption">
+                    <h3>在线教育</h3>
+                    <p class="txt text-left">基于云计算和无线通信技术，并利用IBM x3850、HDS HU150、VMware View构建移动医疗系统的云计算平台，实现了统一管理和虚拟化，提高了系统性能；通过将虚拟桌面与 VMware vSphere的整合，实现了虚拟桌面的集中式管理</p>
+                    <p class="link_btn"> <a href="#" class="btn btn-default" role="button">阅读</a>
+                    <a href="#" class="btn btn-success" role="button">更多</a></p>
+              </div>
+            </div>
+          </div>
+</div>
+   </section>
+  <!--合作伙伴区域-->
+
+  <section class="partner wow zoomInDown" data-wow-offset="10">
+      <h2 class="text-center">
+          我们的忠诚的合作伙伴
+      </h2>
+     <div class="container">
+         <div class="row">
+             <div class="col-xs-12 col-sm-6 col-md-3">
+                 <a href="#" class="thumbnail" title="广发银行">
+                     <img data-src="" alt="..." src="img/part01.jpg">
+                     <div class="line t"></div>
+                     <div class="line r"></div>
+                     <div class="line b"></div>
+                     <div class="line l"></div>
+                 </a>
+             </div>
+             <div class="col-xs-12 col-sm-6 col-md-3">
+                 <a href="#" class="thumbnail" title="齐家">
+                     <img data-src="" alt="..." src="img/part02.jpg">
+                     <div class="line t"></div>
+                     <div class="line r"></div>
+                     <div class="line b"></div>
+                     <div class="line l"></div>
+                 </a>
+             </div>
+             <div class="col-xs-12 col-sm-6 col-md-3">
+                 <a href="#" class="thumbnail" title="都都衣舍">
+                     <img data-src="" alt="..." src="img/part04.jpg">
+                     <div class="line t"></div>
+                     <div class="line r"></div>
+                     <div class="line b"></div>
+                     <div class="line l"></div>
+                 </a>
+             </div>
+             <div class="col-xs-12 col-sm-6 col-md-3">
+                 <a href="#" class="thumbnail" title="中国旅行社">
+                     <img data-src="" alt="..." src="img/part05.jpg">
+                     <div class="line t"></div>
+                     <div class="line r"></div>
+                     <div class="line b"></div>
+                     <div class="line l"></div>
+                 </a>
+             </div>
+             <div class="col-xs-12 col-sm-6 col-md-3">
+                 <a href="#" class="thumbnail" title="酷讯旅游">
+                     <img data-src="" alt="..." src="img/part06.jpg">
+                     <div class="line t"></div>
+                     <div class="line r"></div>
+                     <div class="line b"></div>
+                     <div class="line l"></div>
+                 </a>
+             </div>
+             <div class="col-xs-12 col-sm-6 col-md-3">
+                 <a href="#" class="thumbnail" title="中国旅行社">
+                     <img data-src="" alt="..." src="img/part07.jpg">
+                     <div class="line t"></div>
+                     <div class="line r"></div>
+                     <div class="line b"></div>
+                     <div class="line l"></div>
+                 </a>
+             </div>
+             <div class="col-xs-12 col-sm-6 col-md-3">
+                 <a href="#" class="thumbnail" title="中国旅行社">
+                     <img data-src="" alt="..." src="img/part08.jpg">
+                     <div class="line t"></div>
+                     <div class="line r"></div>
+                     <div class="line b"></div>
+                     <div class="line l"></div>
+                 </a>
+             </div>
+             <div class="col-xs-12 col-sm-6 col-md-3">
+                 <a href="#" class="thumbnail" title="中国旅行社">
+                     <img data-src="" alt="..." src="img/part09.jpg">
+                     <div class="line t"></div>
+                     <div class="line r"></div>
+                     <div class="line b"></div>
+                     <div class="line l"></div>
+                 </a>
+             </div>
+         </div>
+     </div>
+  </section>
+
+
+
+  <!--边栏部分的样式-->
+  <section class="service-box">
+    <div class="btn-server">
+        <i class="icon icon1"></i>
+        客服中心
+    </div>
+      <div class="serviceList">
+          <ul>
+              <li class="title">客服中心</li>
+              <li>
+                  <a href="">
+                      <i class="icon icon2"></i>
+                      在线客服
+                  </a>
+              </li>
+              <li class="phone">
+                  <i class="icon icon3"></i>
+                  售前咨询
+                  <p>13651049521</p>
+              </li>
+              <li class="last">
+                  <i class="icon icon4"></i>
+                  售后服务
+                  <p>400-888-7777</p>
+
+              </li>
+          </ul>
+      </div>
+  </section>
+  <!--回到顶部的火箭-->
+  <section class="top" id="gotop">
+      <span>
+      </span>
+  </section>
+
+
+  <!--footer部分-->
+  <section class="slogen wow rubberBand">
+      <div class="container">
+          <div class="jumbotron text-center">
+              <h1>从今天开始，向“云通讯”迈进</h1>
+              <p><a class="btn btn-info btn-lg" href="#" role="button">免费试用</a></p>
+              <p>或致电18770814538、13651049521，欢迎您的咨询</p>
+          </div>
+      </div>
+  </section>
+  <footer>
+      <div class="container">
+          <div class="row">
+              <div class="col-md-4 part">
+                   <span class="glyphicon glyphicon-cloud" style="color:#1EAEE0;padding-left:10px;font-size:20px;"></span><span class="intro">云通讯平台</span>
+                   <p>带你走进云通讯的生活,体验不一样的乐趣</p>
+              </div>
+              <div class="col-md-4 part">
+                  <div class="media">
+                      <a class="media-left media-middle" href="#">
+                          <img data-src="..." alt="..." src="img/phoneIcon.png">
+                      </a>
+
+                      <div class="media-body">
+                          <h4 class="media-heading">400-800-7777</h4>
+                          <p>9:00-21:00 无日期限制</p>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-4 part">
+                  <div class="media">
+                      <a class="media-left media-middle" href="#">
+                          <img data-src="..." alt="..." src="img/f_wx.png">
+                      </a>
+                      <div class="media-body">
+                          <h4 class="media-heading">打开微信扫一扫</h4>
+                          <p>更多惊喜等着你</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <p class="text-center copyright">版权所有：北京传习教育培训机构，作者：吴鹏丽，联系电话：13651049521欢迎找网站bug</p>
+      </div>
+  </footer>
+
+  <script src="lib/jquery/jquery.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.js"></script>
+  <script src="js/angularjs.js"></script>
+  <script src="js/index.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>

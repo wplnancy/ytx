@@ -1,0 +1,217 @@
+.about{
+    margin-top:120px;
+    background-color: #EEEDE8;
+    padding:20px 0 0 0
+}
+.list-group-item{
+    font-size: 0.8rem;
+    transition: all 0.4s;
+}
+.list-group-item.active,
+.list-group-item.active:hover,
+.list-group-item.active:focus {
+    z-index: 2;
+    color: #1eaee0;
+    font-size: 0.8rem;
+    background-color:#e5e5e5;
+}
+.list-group-item.active,
+.list-group-item.active:hover,
+.list-group-item.active:focus {
+    z-index: 2;
+    color: #1EAEE0;
+    font-size: 0.8rem;
+    border-color: #c7cdd2;
+    border-left: 3px solid #1eaee9;
+}
+.list-group-item.active1,
+.list-group-item.active1:hover,
+.list-group-item.active1:focus {
+    z-index: 2;
+    color: #1EAEE0;
+    font-size: 0.8rem;
+    border-color: #c7cdd2;
+    border-left: 20px solid #1eaee9;
+}
+
+.panel-default > .panel-heading {
+    color: #333;
+    background-color: #f5f5f5;
+    border-color: transparent;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    border-left: 4px solid #1EAEE0;
+}
+.panel-body {
+    font-size: 0.7rem;
+
+    line-height: 1.5;
+}
+.panel-body p{
+    text-indent: 2em;
+}
+
+#wards .panel-heading{
+    border-left: 4px solid #a94442;
+}
+#people .panel-heading{
+    border-left: 4px solid #985f0d;
+}
+#contact .panel-heading{
+    border-left: 4px solid #3e8f3e;
+}
+#summary .panel-body h2,.showMap h2{
+    font-size: 1rem;
+    height: 40px;
+    line-height: 40px;
+    padding-left:10px;
+    color:#C7161C;
+}
+.jzg{
+    height: 85px;
+    width: 87px;
+    margin:0 auto;
+    background: url("../img/aboutbg.jpg") no-repeat 0 -175px;
+    margin-bottom: 10px;
+}
+.type2{
+     background-position: -85px -175px;
+ }
+.type6{
+    background-position: -430px -175px;
+}
+.type3{
+    background-position: -171px -175px;
+}
+.type4{
+    background-position: -257px -175px;
+}
+.type5{
+    background-position: -343px -175px;
+}
+.miaoshu{
+    color:#999;
+    text-align: center;
+}
+.table{
+    color:#666;
+}
+.zp{
+    margin:20px 0;
+}
+.table > thead > tr > th {
+    vertical-align: bottom;
+    border-bottom: 0;
+}
+.table > thead > tr > th{
+    font-size: 0.8rem;
+}
+.table > tbody > tr >td:nth-child(2){
+    color:#1EAEE0;
+}
+
+.table-hover > tbody > tr:hover {
+    background-color: #e5e5e5;
+}
+
+.pagination > .active > a,
+.pagination > .active > a:hover,
+.pagination > .active > a:focus{
+    z-index: 3;
+    color: #fff;
+    cursor: default;
+    background-color: #1eaee0;
+    border-color: #1eaee0;
+}
+
+
+.title-name{
+    color:#a94442;
+    font-weight: 700;
+}
+.sub-title{
+    font-size: 0.7rem;
+    font-weight: 600;
+}
+.item-top-line mark{
+    color:#F9CE68;
+    margin-bottom: 10px;
+}
+.item-title a{
+    color:#1EAEE0;
+}
+.item-title a:hover{
+    color:#2a95db;
+}
+
+.item-detail{
+    line-height: 1.5;
+    border-left: 3px solid #EEEEEE;
+    padding-left: 20px;
+    margin-top: 20px;
+    color:#C5B9B9;
+}
+#wards .row{
+    margin:20px;
+}
+.zizhi{
+    line-height: 30px;
+    border-bottom: #1eaee0 3px solid;
+    height: 40px;
+    font-size: 0.8rem;
+    margin: 20px;
+}
+.describe{
+    box-shadow: 0 0 6px #ddd;
+}
+
+.contact-img img{
+    width: 300px;
+    display: block;
+    margin:0 auto;
+    height: 150px;
+}
+
+.contact-info{
+    margin:20px;
+}
+.mythumbnail{
+    padding: 0;
+    height: auto;
+    border-radius: 0;
+    border:none;
+}
+.contact-msg{
+    margin-bottom: 20px;
+}
+.contact-msg li:nth-of-type(2) span{
+    font-size: 0.9rem;
+    color: #c7161c;
+}
+.contact-msg li+li{
+    border-top: 1px dashed #cccccc;
+    margin-bottom: 5px;
+}
+.tubiao{
+    font-size: 1rem;
+    color: #ccc;
+    padding-right: 10px;
+}
+
+/*µØÍ¼*/
+#address{
+    width:100%;
+    height:300px;
+    margin:0 auto;
+    text-align: center;
+}
+.extra{
+    margin:20px 0;
+}
+.extra li{
+    border-radius: 0;
+    font-size: 0.7rem;
+    border: 0;
+}
+.zb{
+    margin-left:10px;
+}
